@@ -13,7 +13,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the application into the container
 COPY . .
 
-EXPOSE 8080
+EXPOSE 5010
 
 # Command to run the application
 CMD ["python", "app.py"]
