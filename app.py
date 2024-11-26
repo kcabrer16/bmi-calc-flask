@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-@app.route('/myBMI', methods=['GET'])
+@app.route('/bmi/myBMI', methods=['GET'])
 def myBMI():
     height = request.args.get('height', default=1, type=float)
     weight = request.args.get('weight', default=0, type=float)
@@ -13,7 +13,7 @@ def myBMI():
     bmi = (weight / (height ** 2)) * 703
     return jsonify({"bmi": round(bmi, 2)})
 
-@app.route('/myHealth', methods=['GET'])
+@app.route('/bmi/myHealth', methods=['GET'])
 def myHealth():
     height = request.args.get('height', type=float)
     weight = request.args.get('weight', type=float)
