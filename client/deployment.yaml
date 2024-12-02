@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bmi-client
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: bmi-client
+  template:
+    metadata:
+      labels:
+        app: bmi-client
+    spec:
+      containers:
+      - name: bmi-client
+        image: us-docker.pkg.dev/bmi-calculator-442814/bmi-calc-repo/bmi-client-img:v2
+        ports:
+        - containerPort: 80

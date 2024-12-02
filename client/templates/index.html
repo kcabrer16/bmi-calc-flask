@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Status Calculator</title>
+</head>
+<body>
+    <h1>Health Status Calculator</h1>
+    <form method="post">
+        <div>
+            <label for="height">Height:</label>
+            <input type="text" id="height" name="height" required><br>
+        </div>
+        <div>
+            <label for="weight">Weight:</label>
+            <input type="text" id="weight" name="weight" required><br>
+        </div>
+        <div>
+            <input type="submit" value="Get Health Status">
+        </div>
+        <div style="color: {{ color }};">
+            {{ output_message }}
+        </div>
+    </form>
+</body>
+</html>
